@@ -1,5 +1,8 @@
  
 
+   var today = dayjs();
+   $('#currentDay').text(today.format('dddd,MMMM D'));  
+
   var timeBlockEl = ('.time-block');
      
   var descriptionEl =('.description');
@@ -16,7 +19,7 @@
     descriptionListEl = " ";
     descriptionListEl.push(activityDescription);
     localStorage.setItem("My activities", JSON.stringify(discriptionListEl));
-      timeBlockEl.on('click', .firstActivity, handleActivityList);
+      timeBlockEl.on('click', descriptionListEl, handleActivityList);
   };
        
   
@@ -33,10 +36,6 @@
             $('#hour-5').addClass('future');
           }
 
-         
-    
-
 }
 
-var today =dayjs();
-$('#currentDay').text(today.format('dddd,MMMM D'));  
+ 
